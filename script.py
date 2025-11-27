@@ -17,7 +17,7 @@ def parse_args(argv: List[str]) -> argparse.Namespace:
     parser.add_argument("--report",
                         required=True,
                         choices=REPORT_REGISTRY.keys(),
-                        help="report name")
+                        help=f"report name, choose from {list(REPORT_REGISTRY.keys())}")
     return parser.parse_args(argv)
 
 
